@@ -32,7 +32,7 @@ jobs:
           ssh-private-key: ${{ secrets.VAULT_DEPLOY_KEY }}
 
       - name: Checkout submodules
-        run: git submodule update --remote --merge
+        run: git submodule update --init --recursive
 
       - uses: actions/setup-node@v4
         with:
